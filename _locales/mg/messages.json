@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "Encode / Decode",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL ary HTML enti-manodina sy fandrafetana fitaovana.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "Base64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "HTML Entities",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "fahan'ny",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "Output",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "Ampidiro lahatsoratra handrafetana na Base64 hamadika…",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "Ampidiro lahatsoratra hadikao na tadiny misy kaody URL hadikao…",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "Ampidiro lahatsoratra hadikao na enti-mody HTML hadikao…",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "Ho hita eto ny valiny…",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "isa",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "Decode",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "Mazava",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "dika mitovy",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "Nadika!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "Karazan-kodiarana",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "Safidio ny fiteny interface",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "Ny fanodinana rehetra dia mitranga eo an-toerana - tsy misy miala amin'ny navigateur anao.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 char",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ chars",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "Foana ny fidirana — tsy misy tokony hokarakaraina.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "Base64 tsy mety: misy tarehintsoratra ivelan'ny abidy Base64.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "Base64 tsy mety: padding diso (tokony ho maromaro amin'ny 4 ny halavany).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "Tsy manankery ny UTF-8 ny bytes decoded. Ny Base64 dia mety manisy code binary data.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Tsy nahomby ny famandrihana base64: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "Tsy nahomby ny famandrihana: misy tarehintsoratra solon-kaody tsy mety ny fampidirana.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "Fanodinana URL tsy mety: misy filaharana diso isan-jato ny fampidirana.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "Tsy nahomby ny famandrihana HTML: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "Tsy nahomby ny famoahana HTML: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "Ny sampan-draharaha sasany dia tsy fantatra ary tsy niova: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "Ny sampan-draharaha sasany dia tsy fantatra ary tsy niova: $ENTITIES$ sy $COUNT$ fanampiny.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "Soso-kevitra: Ctrl+Enter mba hanidy",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

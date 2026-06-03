@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "Kodlamak / kodlamak",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL we HTML guramasyny kodlamak we kodlamak hyzmatlary.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "Base64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "HTML guramalary",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "Giriş",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "Çykyş",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "Kodlamak üçin tekst giriziň ýa-da kodlamak üçin Base64…",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "Kodlamak üçin tekst ýa-da kodlamak üçin URL kodlanan setir giriziň…",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "Kodlamak üçin tekst giriziň ýa-da kodlamak üçin HTML guramalary…",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "Netije şu ýerde peýda bolar ...",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "Kodlamak",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "Kodlamak",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "Arassala",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "Göçüriň",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "Göçürildi!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "Kodlamagyň görnüşi",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "Interfeýs dilini saýlaň",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "Processinghli gaýtadan işlemek ýerli ýagdaýda bolýar - brauzeriňizden hiç zat çykmaýar.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 char",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$ COUNT $ harplar",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "Giriş boş - gaýtadan işlemeli zat ýok.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "Nädogry Base64: Base64 elipbiýiniň daşyndaky nyşanlary öz içine alýar.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "Nädogry Base64: nädogry padding (uzynlygy 4-den köp bolmaly).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "Kodlanan baýtlar UTF-8 dogry däl. Base64 ikilik maglumatlary kodlap biler.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Base64 kodlamak şowsuz: $ DETAIL $",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "Kodlamak şowsuz: girişde nädogry Unicode surogate nyşanlary bar.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "Nädogry URL kodlamagy: girişde nädogry kodlanan yzygiderlilik bar.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "HTML kodlamak şowsuz: $ DETAIL $",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "HTML kodlamagy şowsuz: $ DETAIL $",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "Käbir guramalar ykrar edilmedi we üýtgemedi: $ ENTITIES $",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "Käbir guramalar ykrar edilmedi we üýtgemedi: $ ENTITIES $ we $ COUNT $ has köp.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "Maslahat: Kodlamak üçin Ctrl + Enter",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

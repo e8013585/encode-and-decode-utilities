@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "Encode / Decode",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL, at HTML entity encoding at decoding utilities.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "Base64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "HTML Entity",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "Input",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "Output",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "Maglagay ng text para i-encode o Base64 para i-decode...",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "Maglagay ng text na ie-encode o isang URL-encoded string para i-decode...",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "Maglagay ng text para i-encode o HTML entity na i-decode...",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "Lalabas dito ang resulta...",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "I-encode",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "Mag-decode",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "Maaliwalas",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "Kopyahin",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "Kinopya!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "Uri ng pag-encode",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "Piliin ang wika ng interface",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "Lahat ng pagpoproseso ay nangyayari nang lokal — walang umalis sa iyong browser.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 char",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ character",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "Walang laman ang input — walang ipoproseso.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "Invalid Base64: naglalaman ng mga character sa labas ng Base64 alphabet.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "Di-wastong Base64: maling padding (dapat na multiple ng 4 ang haba).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "Ang mga na-decode na byte ay hindi wastong UTF-8. Ang Base64 ay maaaring mag-encode ng binary data.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Nabigo ang pag-encode ng Base64: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "Nabigo ang pag-encode: naglalaman ang input ng mga di-wastong Unicode surrogate character.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "Di-wastong pag-encode ng URL: ang input ay naglalaman ng isang maling pagkakasunud-sunod na porsyento na naka-encode.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "Nabigo ang pag-encode ng HTML: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "Nabigo ang HTML decoding: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "Ang ilang entity ay hindi nakilala at hindi nabago: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "Ang ilang entity ay hindi nakilala at hindi nabago: $ENTITIES$ at $COUNT$ pa.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "Tip: Ctrl+Enter para mag-encode",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

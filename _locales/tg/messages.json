@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "Рамзгузорӣ / Рамз кардан",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Утилитҳои рамзгузорӣ ва рамзкушоӣ Base64, URL ва HTML.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "Асос 64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "Объектҳои HTML",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "Вуруд",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "Натиҷа",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "Матнро барои рамзгузорӣ ё Base64 барои рамзкушоӣ ворид кунед…",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "Барои рамзгузорӣ матн ё сатри бо URL-рамзшуда барои рамзкушоӣ ворид кунед…",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "Барои рамзгузорӣ матн ё объектҳои HTMLро барои рамзкушоӣ ворид кунед…",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "Натиҷа дар ин ҷо пайдо мешавад…",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "Рамзгузорӣ",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "Декод кардан",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "Тоза",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "Нусхабардорӣ",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "Нусхабардорӣ!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "Навъи рамзгузорӣ",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "Забони интерфейсро интихоб кунед",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "Ҳама коркардҳо ба таври маҳаллӣ сурат мегиранд - ҳеҷ чиз браузери шуморо тарк намекунад.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 аломат",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ аломат",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "Вуруд холӣ аст - ҳеҷ чиз барои коркард нест.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "Base64 нодуруст: дорои аломатҳои берун аз алифбои Base64.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "Беэътибор Base64: пуркунии нодуруст (дарозӣ бояд чандкаратаи 4 бошад).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "Байтҳои рамзкушошуда UTF-8 эътибор надоранд. Base64 метавонад маълумоти бинариро рамзгузорӣ кунад.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Рамзгузории Base64 ноком шуд: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "Рамзгузорӣ ноком шуд: вуруд дорои аломатҳои ивазкунандаи беэътибори Юникод мебошад.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "Рамзгузории нодурусти URL: вуруд дорои пайдарпайии нодурусти бо фоиз-рамзгузорӣ шудааст.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "Рамзгузории HTML ноком шуд: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "Рамзи HTML ноком шуд: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "Баъзе объектҳо эътироф нашуданд ва бетағйир монданд: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "Баъзе объектҳо эътироф нашуданд ва бетағйир монданд: $ENTITIES$ ва $COUNT$ бештар.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "Маслиҳат: Ctrl+Enter барои рамзгузорӣ",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

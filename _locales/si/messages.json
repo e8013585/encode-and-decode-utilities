@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "කේතනය / විකේතනය කරන්න",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL, සහ HTML entity encoding සහ decoding utilities.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "පදනම64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "HTML ආයතන",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "ආදානය",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "ප්රතිදානය",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "කේතනය කිරීමට පෙළ හෝ විකේතනය කිරීමට Base64 ඇතුළු කරන්න...",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "කේතනය කිරීමට පෙළ හෝ විකේතනය කිරීමට URL-කේතන ලද තන්තුවක් ඇතුළු කරන්න...",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "කේතනය කිරීමට පෙළ හෝ විකේතනය කිරීමට HTML ආයතන ඇතුළු කරන්න...",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "ප්‍රතිඵලය මෙහි දිස්වනු ඇත...",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "සංකේතනය කරන්න",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "විකේතනය කරන්න",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "පැහැදිලියි",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "පිටපත් කරන්න",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "පිටපත් කළා!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "කේතන වර්ගය",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "අතුරු මුහුණත් භාෂාව තෝරන්න",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "සියලුම සැකසුම් දේශීයව සිදු වේ - කිසිවක් ඔබගේ බ්‍රවුසරයෙන් ඉවත් නොවේ.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "අක්ෂර 1 ක්",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "අකුරු $COUNT$",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "ආදානය හිස් - සැකසීමට කිසිවක් නැත.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "වලංගු නොවන Base64: Base64 හෝඩියෙන් පිටත අක්ෂර අඩංගු වේ.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "වලංගු නොවන Base64: වැරදි පිරවුම (දිග 4 න් ගුණාකාර විය යුතුය).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "විකේතනය කරන ලද බයිට් වලංගු UTF-8 නොවේ. Base64 ද්විමය දත්ත කේතනය කළ හැක.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Base64 කේතනය අසාර්ථක විය: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "කේතනය කිරීම අසාර්ථක විය: ආදානයේ වලංගු නොවන යුනිකෝඩ් ආදේශක අක්ෂර අඩංගු වේ.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "වලංගු නොවන URL කේතීකරණය: ආදානයේ වැරදි ලෙස සකස් කරන ලද සියයට-කේතනය කළ අනුපිළිවෙලක් අඩංගු වේ.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "HTML කේතනය අසාර්ථක විය: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "HTML විකේතනය අසාර්ථක විය: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "සමහර ආයතන හඳුනා නොගත් අතර නොවෙනස්ව තබා ඇත: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "සමහර ආයතන හඳුනා නොගත් අතර නොවෙනස්ව තබා ඇත: $ENTITIES$ සහ තවත් $COUNT$.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "ඉඟිය: කේතනය කිරීමට Ctrl+Enter",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

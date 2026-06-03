@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "ເຂົ້າລະຫັດ / ຖອດລະຫັດ",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL, ແລະ HTML entity encoding and decoding utilities.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "ຖານ 64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "ໜ່ວຍງານ HTML",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "ປ້ອນຂໍ້ມູນ",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "ຜົນຜະລິດ",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "ໃສ່ຂໍ້ຄວາມເພື່ອເຂົ້າລະຫັດ ຫຼື Base64 ເພື່ອຖອດລະຫັດ...",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "ໃສ່ຂໍ້ຄວາມເພື່ອເຂົ້າລະຫັດ ຫຼືສະຕຣິງທີ່ເຂົ້າລະຫັດ URL ເພື່ອຖອດລະຫັດ...",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "ໃສ່ຂໍ້ຄວາມເພື່ອເຂົ້າລະຫັດ ຫຼື HTML entities ເພື່ອຖອດລະຫັດ...",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "ຜົນໄດ້ຮັບຈະປາກົດຢູ່ທີ່ນີ້…",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "ເຂົ້າລະຫັດ",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "ຖອດລະຫັດ",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "ຈະແຈ້ງ",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "ສຳເນົາ",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "ສຳເນົາແລ້ວ!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "ປະເພດການເຂົ້າລະຫັດ",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "ເລືອກພາສາໃນການໂຕ້ຕອບ",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "ການປະມວນຜົນທັງໝົດເກີດຂຶ້ນຢູ່ໃນທ້ອງຖິ່ນ — ບໍ່ມີຫຍັງອອກຈາກຕົວທ່ອງເວັບຂອງທ່ານ.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 ຄັນ",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ ຕົວອັກສອນ",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "ການປ້ອນຂໍ້ມູນຫວ່າງເປົ່າ — ບໍ່ມີຫຍັງທີ່ຈະປະມວນຜົນ.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "Base64 ບໍ່ຖືກຕ້ອງ: ມີຕົວອັກສອນຢູ່ນອກຕົວອັກສອນ Base64.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "Base64 ບໍ່ຖືກຕ້ອງ: padding ບໍ່ຖືກຕ້ອງ (ຄວາມຍາວຕ້ອງເປັນຄູນຂອງ 4).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "bytes ຖອດລະຫັດບໍ່ຖືກຕ້ອງ UTF-8. Base64 ອາດຈະເຂົ້າລະຫັດຂໍ້ມູນຖານສອງ.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "ການເຂົ້າລະຫັດ Base64 ລົ້ມເຫລວ: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "ການເຂົ້າລະຫັດລົ້ມເຫລວ: ການປ້ອນຂໍ້ມູນມີຕົວອັກສອນຕົວແທນຂອງ Unicode ທີ່ບໍ່ຖືກຕ້ອງ.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "ການເຂົ້າລະຫັດ URL ບໍ່ຖືກຕ້ອງ: ວັດສະດຸປ້ອນເຂົ້າມີລຳດັບທີ່ເຂົ້າລະຫັດເປັນເປີເຊັນທີ່ບໍ່ຖືກຕ້ອງ.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "ການເຂົ້າລະຫັດ HTML ລົ້ມເຫລວ: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "ການຖອດລະຫັດ HTML ລົ້ມເຫລວ: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "ບາງຫົວໜ່ວຍບໍ່ຖືກຮັບຮູ້ ແລະປະໄວ້ບໍ່ປ່ຽນແປງ: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "ບາງຫົວໜ່ວຍບໍ່ຖືກຮັບຮູ້ ແລະປະໄວ້ບໍ່ປ່ຽນແປງ: $ENTITIES$ ແລະອີກ $COUNT$.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "ເຄັດລັບ: Ctrl+Enter ເພື່ອເຂົ້າລະຫັດ",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

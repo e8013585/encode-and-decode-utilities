@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "ఎన్కోడ్ / డీకోడ్",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL మరియు HTML ఎంటిటీ ఎన్‌కోడింగ్ మరియు డీకోడింగ్ యుటిలిటీలు.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "బేస్64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "URL",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "HTML ఎంటిటీలు",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "ఇన్పుట్",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "అవుట్‌పుట్",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "ఎన్‌కోడ్ చేయడానికి వచనాన్ని లేదా డీకోడ్ చేయడానికి Base64ని నమోదు చేయండి...",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "ఎన్‌కోడ్ చేయడానికి వచనాన్ని లేదా డీకోడ్ చేయడానికి URL-ఎన్‌కోడ్ చేసిన స్ట్రింగ్‌ను నమోదు చేయండి…",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "ఎన్‌కోడ్ చేయడానికి టెక్స్ట్ లేదా డీకోడ్ చేయడానికి HTML ఎంటిటీలను నమోదు చేయండి...",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "ఫలితం ఇక్కడ కనిపిస్తుంది…",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "ఎన్కోడ్",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "డీకోడ్ చేయండి",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "క్లియర్",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "కాపీ చేయండి",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "కాపీ చేయబడింది!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "ఎన్కోడింగ్ రకం",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "ఇంటర్ఫేస్ భాషను ఎంచుకోండి",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "అన్ని ప్రాసెసింగ్ స్థానికంగా జరుగుతుంది - మీ బ్రౌజర్‌ను ఏదీ వదిలిపెట్టదు.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 అక్షరం",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ అక్షరాలు",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "ఇన్‌పుట్ ఖాళీగా ఉంది - ప్రాసెస్ చేయడానికి ఏమీ లేదు.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "చెల్లని Base64: Base64 వర్ణమాల వెలుపల అక్షరాలు ఉన్నాయి.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "చెల్లని Base64: సరికాని ప్యాడింగ్ (పొడవు తప్పనిసరిగా 4 యొక్క గుణకారంగా ఉండాలి).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "డీకోడ్ చేసిన బైట్‌లు UTF-8 చెల్లవు. Base64 బైనరీ డేటాను ఎన్కోడ్ చేయవచ్చు.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Base64 ఎన్‌కోడింగ్ విఫలమైంది: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "ఎన్‌కోడింగ్ విఫలమైంది: ఇన్‌పుట్ చెల్లని యూనికోడ్ సర్రోగేట్ అక్షరాలను కలిగి ఉంది.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "చెల్లని URL ఎన్‌కోడింగ్: ఇన్‌పుట్ తప్పుగా రూపొందించబడిన శాతం-ఎన్‌కోడ్ క్రమాన్ని కలిగి ఉంది.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "HTML ఎన్‌కోడింగ్ విఫలమైంది: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "HTML డీకోడింగ్ విఫలమైంది: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "కొన్ని ఎంటిటీలు గుర్తించబడలేదు మరియు మారకుండా ఉంచబడ్డాయి: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "కొన్ని ఎంటిటీలు గుర్తించబడలేదు మరియు మార్చబడలేదు: $ENTITIES$ మరియు $COUNT$ మరిన్ని.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "చిట్కా: ఎన్‌కోడ్ చేయడానికి Ctrl+Enter",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}
