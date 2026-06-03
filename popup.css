@@ -1,0 +1,442 @@
+/* ─── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Colours */
+  --color-bg:              #f8f8fb;
+  --color-surface:         #ffffff;
+  --color-border:          #e2e2ec;
+  --color-border-focus:    #4f46e5;
+  --color-primary:         #4f46e5;
+  --color-primary-hover:   #4338ca;
+  --color-primary-text:    #ffffff;
+  --color-secondary:       #f1f0ff;
+  --color-secondary-hover: #e5e3ff;
+  --color-secondary-text:  #4f46e5;
+  --color-ghost:           transparent;
+  --color-ghost-hover:     #f1f0ff;
+  --color-ghost-text:      #6b7280;
+  --color-text:            #111827;
+  --color-text-muted:      #6b7280;
+  --color-output-bg:       #f9f9fc;
+  --color-error:           #dc2626;
+  --color-error-bg:        #fef2f2;
+  --color-success:         #16a34a;
+  --color-success-bg:      #f0fdf4;
+  --color-warning:         #d97706;
+  --color-warning-bg:      #fffbeb;
+  --color-tab-active:      #4f46e5;
+  --color-tab-text:        #6b7280;
+  --color-copy:            #374151;
+
+  /* Sizing */
+  --radius-sm:    6px;
+  --radius-md:    10px;
+  --radius-lg:    14px;
+  --shadow-sm:    0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-focus: 0 0 0 3px rgba(79,70,229,.25);
+  --font:         -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  width: 460px;
+  min-height: 200px;
+  overflow-x: hidden;
+}
+
+/* ─── App Shell ─────────────────────────────────────────────────────────────── */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* ─── Header ────────────────────────────────────────────────────────────────── */
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px 12px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.app-logo {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+}
+
+.app-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+/* ─── Tab Navigation ────────────────────────────────────────────────────────── */
+.tab-nav {
+  display: flex;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 12px;
+  gap: 2px;
+}
+
+.tab-btn {
+  position: relative;
+  padding: 10px 14px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: var(--font);
+  color: var(--color-tab-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: color .15s, background .15s;
+  white-space: nowrap;
+  outline: none;
+}
+
+.tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-tab-active);
+  border-radius: 2px 2px 0 0;
+  transform: scaleX(0);
+  transition: transform .2s ease;
+}
+
+.tab-btn:hover {
+  color: var(--color-primary);
+  background: var(--color-secondary);
+}
+
+.tab-btn--active {
+  color: var(--color-tab-active);
+  font-weight: 600;
+}
+
+.tab-btn--active::after {
+  transform: scaleX(1);
+}
+
+.tab-btn:focus-visible {
+  box-shadow: var(--shadow-focus);
+}
+
+/* ─── Panels ────────────────────────────────────────────────────────────────── */
+.panels {
+  flex: 1;
+}
+
+.panel {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ─── Field ─────────────────────────────────────────────────────────────────── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.char-count {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.field-textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  resize: vertical;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+  box-shadow: var(--shadow-sm);
+}
+
+.field-textarea::placeholder {
+  color: #c0bfd0;
+  font-family: var(--font);
+  font-size: 0.8125rem;
+}
+
+.field-textarea:focus {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
+}
+
+.field-textarea--output {
+  background: var(--color-output-bg);
+  color: #374151;
+  cursor: default;
+  height: 100px;
+}
+
+.field-textarea--output:focus {
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Error state on output */
+.field-textarea--error {
+  border-color: var(--color-error) !important;
+  background: var(--color-error-bg) !important;
+}
+
+/* ─── Action Row ────────────────────────────────────────────────────────────── */
+.action-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* ─── Output Row ────────────────────────────────────────────────────────────── */
+.output-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 28px;
+}
+
+/* ─── Buttons ───────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: var(--font);
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  outline: none;
+  transition: background .15s, border-color .15s, color .15s, box-shadow .15s,
+              transform .1s;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  box-shadow: var(--shadow-focus);
+}
+
+/* Primary */
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-primary-text);
+  border-color: var(--color-primary);
+}
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+/* Secondary */
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-secondary-text);
+  border-color: #d4d2f7;
+}
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+/* Ghost */
+.btn--ghost {
+  background: var(--color-ghost);
+  color: var(--color-ghost-text);
+  border-color: var(--color-border);
+}
+.btn--ghost:hover {
+  background: var(--color-ghost-hover);
+  color: var(--color-primary);
+  border-color: #d4d2f7;
+}
+
+/* Clear — pushed to the end */
+.btn--clear {
+  margin-inline-start: auto;
+}
+
+/* Copy */
+.btn--copy {
+  background: none;
+  border: 1.5px solid var(--color-border);
+  color: var(--color-copy);
+  padding: 5px 11px;
+  font-size: 0.75rem;
+}
+.btn--copy:hover {
+  background: var(--color-secondary);
+  border-color: #d4d2f7;
+  color: var(--color-primary);
+}
+
+.btn--copy--success {
+  background: var(--color-success-bg) !important;
+  border-color: #86efac !important;
+  color: var(--color-success) !important;
+}
+
+/* ─── Status Message ────────────────────────────────────────────────────────── */
+.status-msg {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 0;
+  min-height: 20px;
+  border-radius: var(--radius-sm);
+  transition: color .2s;
+}
+
+.status-msg--error {
+  color: var(--color-error);
+}
+
+.status-msg--success {
+  color: var(--color-success);
+}
+
+.status-msg--warning {
+  color: var(--color-warning);
+}
+
+/* ─── Footer ────────────────────────────────────────────────────────────────── */
+.app-footer {
+  padding: 8px 16px 10px;
+  font-size: 0.7rem;
+  color: #b0afc4;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+  letter-spacing: 0.01em;
+}
+
+/* ─── Utility ───────────────────────────────────────────────────────────────── */
+[hidden] {
+  display: none !important;
+}
+
+/* ─── Language Selector ─────────────────────────────────────────────────────── */
+.lang-selector-wrap {
+  margin-inline-start: auto; /* pushes to the end in both LTR and RTL */
+  display: flex;
+  align-items: center;
+}
+
+.lang-selector {
+  font-family: var(--font);
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  cursor: pointer;
+  outline: none;
+  max-width: 140px;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.lang-selector:focus-visible {
+  border-color: var(--color-border-focus);
+  box-shadow: var(--shadow-focus);
+}
+
+/* ─── Keyboard hint ─────────────────────────────────────────────────────────── */
+.kb-hint {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  margin-top: 2px;
+  display: block;
+}
+
+/* ─── Screen-reader only utility ────────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ─── RTL overrides ──────────────────────────────────────────────────────────── */
+/*
+  Most layout is already RTL-safe because we use:
+  gap, padding (not padding-left/right), margin-inline-start, flexbox.
+
+  These rules handle the few cases that need explicit mirroring.
+*/
+
+[dir="rtl"] .field-label {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .output-row {
+  flex-direction: row-reverse;
+}
+
+/* Monospace textarea — let the browser handle bidi for the content itself */
+[dir="rtl"] .field-textarea {
+  text-align: start; /* respects dir attribute */
+}

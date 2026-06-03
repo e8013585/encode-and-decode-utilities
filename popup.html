@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encode / Decode</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Header -->
+    <header class="app-header">
+      <svg class="app-logo" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <rect x="2" y="3" width="20" height="18" rx="3" fill="#4f46e5"/>
+        <path d="M7 8l-3 4 3 4M17 8l3 4-3 4M13 7l-2 10"
+              stroke="#fff" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <h1 class="app-title" data-i18n-text="appName">Encode / Decode</h1>
+
+      <!-- Language selector -->
+      <div class="lang-selector-wrap">
+        <label class="sr-only" for="lang-selector" data-i18n-text="ariaLangSelector">
+          Select interface language
+        </label>
+        <select
+          class="lang-selector"
+          id="lang-selector"
+          data-i18n-aria-label="ariaLangSelector"
+        >
+          <!-- Options populated by i18n.js → populateLanguageSelector() -->
+        </select>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav" role="tablist" data-i18n-aria-label="ariaTabList">
+
+      <button
+        class="tab-btn tab-btn--active"
+        role="tab"
+        aria-selected="true"
+        aria-controls="panel-base64"
+        data-tab="base64"
+        id="tab-base64"
+        data-i18n-text="tabBase64"
+      >Base64</button>
+
+      <button
+        class="tab-btn"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-url"
+        data-tab="url"
+        id="tab-url"
+        data-i18n-text="tabUrl"
+      >URL</button>
+
+      <button
+        class="tab-btn"
+        role="tab"
+        aria-selected="false"
+        aria-controls="panel-html"
+        data-tab="html"
+        id="tab-html"
+        data-i18n-text="tabHtml"
+      >HTML Entities</button>
+
+    </nav>
+
+    <!-- Tab Panels -->
+    <main class="panels">
+
+      <!-- Base64 Panel -->
+      <section
+        class="panel panel--active"
+        id="panel-base64"
+        role="tabpanel"
+        aria-labelledby="tab-base64"
+      >
+        <div class="field">
+          <label class="field-label" for="base64-input" data-i18n-text="labelInput">
+            Input
+          </label>
+          <textarea
+            class="field-textarea"
+            id="base64-input"
+            data-i18n-placeholder="placeholderBase64Input"
+            spellcheck="false"
+            autocomplete="off"
+          ></textarea>
+          <span class="kb-hint" data-i18n-text="tooltipKbShortcut"></span>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn--primary" data-action="encode" data-type="base64">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-i18n-text="btnEncode">Encode</span>
+          </button>
+          <button class="btn btn--secondary" data-action="decode" data-type="base64">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M14 8H2M7 4L3 8l4 4" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-i18n-text="btnDecode">Decode</span>
+          </button>
+          <button class="btn btn--ghost btn--clear" data-action="clear" data-type="base64">
+            <span data-i18n-text="btnClear">Clear</span>
+          </button>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="base64-output">
+            <span data-i18n-text="labelOutput">Output</span>
+            <span class="char-count" id="base64-char-count"></span>
+          </label>
+          <textarea
+            class="field-textarea field-textarea--output"
+            id="base64-output"
+            data-i18n-placeholder="placeholderOutput"
+            readonly
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="output-row">
+          <div class="status-msg" id="base64-status" aria-live="polite"></div>
+          <button class="btn btn--copy"
+                  data-action="copy"
+                  data-target="base64-output">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="5" y="5" width="9" height="10" rx="1.5"
+                    stroke="currentColor" stroke-width="1.5"/>
+              <path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v8A1.5 1.5 0 003.5 13H5"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span data-i18n-text="btnCopy">Copy</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- URL Panel -->
+      <section
+        class="panel"
+        id="panel-url"
+        role="tabpanel"
+        aria-labelledby="tab-url"
+        hidden
+      >
+        <div class="field">
+          <label class="field-label" for="url-input" data-i18n-text="labelInput">
+            Input
+          </label>
+          <textarea
+            class="field-textarea"
+            id="url-input"
+            data-i18n-placeholder="placeholderUrlInput"
+            spellcheck="false"
+            autocomplete="off"
+          ></textarea>
+          <span class="kb-hint" data-i18n-text="tooltipKbShortcut"></span>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn--primary" data-action="encode" data-type="url">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-i18n-text="btnEncode">Encode</span>
+          </button>
+          <button class="btn btn--secondary" data-action="decode" data-type="url">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M14 8H2M7 4L3 8l4 4" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-i18n-text="btnDecode">Decode</span>
+          </button>
+          <button class="btn btn--ghost btn--clear" data-action="clear" data-type="url">
+            <span data-i18n-text="btnClear">Clear</span>
+          </button>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="url-output">
+            <span data-i18n-text="labelOutput">Output</span>
+            <span class="char-count" id="url-char-count"></span>
+          </label>
+          <textarea
+            class="field-textarea field-textarea--output"
+            id="url-output"
+            data-i18n-placeholder="placeholderOutput"
+            readonly
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="output-row">
+          <div class="status-msg" id="url-status" aria-live="polite"></div>
+          <button class="btn btn--copy"
+                  data-action="copy"
+                  data-target="url-output">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="5" y="5" width="9" height="10" rx="1.5"
+                    stroke="currentColor" stroke-width="1.5"/>
+              <path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v8A1.5 1.5 0 003.5 13H5"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span data-i18n-text="btnCopy">Copy</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- HTML Entities Panel -->
+      <section
+        class="panel"
+        id="panel-html"
+        role="tabpanel"
+        aria-labelledby="tab-html"
+        hidden
+      >
+        <div class="field">
+          <label class="field-label" for="html-input" data-i18n-text="labelInput">
+            Input
+          </label>
+          <textarea
+            class="field-textarea"
+            id="html-input"
+            data-i18n-placeholder="placeholderHtmlInput"
+            spellcheck="false"
+            autocomplete="off"
+          ></textarea>
+          <span class="kb-hint" data-i18n-text="tooltipKbShortcut"></span>
+        </div>
+
+        <div class="action-row">
+          <button class="btn btn--primary" data-action="encode" data-type="html">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M2 8h12M9 4l4 4-4 4" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-i18n-text="btnEncode">Encode</span>
+          </button>
+          <button class="btn btn--secondary" data-action="decode" data-type="html">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M14 8H2M7 4L3 8l4 4" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-i18n-text="btnDecode">Decode</span>
+          </button>
+          <button class="btn btn--ghost btn--clear" data-action="clear" data-type="html">
+            <span data-i18n-text="btnClear">Clear</span>
+          </button>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="html-output">
+            <span data-i18n-text="labelOutput">Output</span>
+            <span class="char-count" id="html-char-count"></span>
+          </label>
+          <textarea
+            class="field-textarea field-textarea--output"
+            id="html-output"
+            data-i18n-placeholder="placeholderOutput"
+            readonly
+            spellcheck="false"
+          ></textarea>
+        </div>
+
+        <div class="output-row">
+          <div class="status-msg" id="html-status" aria-live="polite"></div>
+          <button class="btn btn--copy"
+                  data-action="copy"
+                  data-target="html-output">
+            <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <rect x="5" y="5" width="9" height="10" rx="1.5"
+                    stroke="currentColor" stroke-width="1.5"/>
+              <path d="M11 5V3.5A1.5 1.5 0 009.5 2h-6A1.5 1.5 0 002 3.5v8A1.5 1.5 0 003.5 13H5"
+                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span data-i18n-text="btnCopy">Copy</span>
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <span data-i18n-text="footerPrivacy">
+        All processing happens locally — nothing leaves your browser.
+      </span>
+    </footer>
+
+  </div>
+
+  <script src="utils/base64.js"></script>
+  <script src="utils/url.js"></script>
+  <script src="utils/htmlEntities.js"></script>
+  <script src="i18n.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
