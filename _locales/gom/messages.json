@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "एन्कोड / डिकोड करप",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL, आनी HTML अस्तित्व एन्कोडिंग आनी डिकोडिंग उपयुक्तताय.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "बेस64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "यूआरएल",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "एचटीएमएल अस्तित्वां",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "इनपुट",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "उत्पादन",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "एन्कोड करपाक मजकूर वा डिकोड करपाक Base64 दाखयात...",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "एन्कोड करपाक मजकूर वा डिकोड करपाक URL-एन्कोड केल्ली स्ट्रिंग दाखयात...",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "एन्कोड करपाक मजकूर वा डिकोड करपाक एचटीएमएल अस्तित्व दाखयात...",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "रिजल्ट हांगा दिसतलो...",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "एन्कोड करप",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "डिकोड करप",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "नितळ",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "प्रत करप",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "नकल केल्ली!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "एन्कोडिंग प्रकार",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "संवाद भास निवडात",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "सगळी प्रक्रिया थळाव्यान जाता — तुमचो ब्राउझर कांयच सोडना.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "१ चार",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ अक्षरां",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "इनपुट रितें आसा — प्रक्रिया करपाक कांयच ना.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "अवैध Base64: बेस64 वर्णमाळे भायर अक्षरां आसात.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "अवैध Base64: चुकीची पॅडींग (लांबाय 4 चो गुणनपद आसूंक जाय).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "डिकोड केल्ले बाइट वैध UTF-8 नात. Base64 द्विपदी डेटा एन्कोड करूंक शकता.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Base64 एन्कोडिंग अपयशी: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "एन्कोडिंग अपयशी: इनपुटांत अवैध युनिकोड प्रतिनिधी वर्ण आसात.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "अवैध URL एन्कोडींग: इनपुटांत विकृत टक्के-एन्कोडेड क्रम आसता.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "HTML एन्कोडींग अपयशी: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "HTML डिकोडींग अपयशी: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "कांय अस्तित्वांक मान्यताय मेळ्ळी ना आनी बदलूंक ना: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "कांय अस्तित्वांक मान्यताय मेळ्ळी ना आनी बदलूंक ना: $ENTITIES$ आनी $COUNT$ चड.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "टिप: एन्कोड करपाक Ctrl+Enter करात",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "appName": {
+    "message": "Hoʻopaʻa / hoʻokaʻawale",
+    "description": "The name of the extension, shown in the Chrome toolbar tooltip and extension management page."
+  },
+  "appDescription": {
+    "message": "Base64, URL, a me HTML mea hoʻopili a me ka decoding pono.",
+    "description": "Short description shown on the Chrome Web Store and extensions page. Max ~132 characters."
+  },
+  "tabBase64": {
+    "message": "Kumu64",
+    "description": "Label for the Base64 tab in the popup navigation."
+  },
+  "tabUrl": {
+    "message": "HKH",
+    "description": "Label for the URL encoding tab in the popup navigation."
+  },
+  "tabHtml": {
+    "message": "Nā Mea HTML",
+    "description": "Label for the HTML Entities tab in the popup navigation."
+  },
+  "labelInput": {
+    "message": "Hookomo",
+    "description": "Label above the input textarea in each tab panel."
+  },
+  "labelOutput": {
+    "message": "Hoʻopuka",
+    "description": "Label above the output (read-only) textarea in each tab panel."
+  },
+  "placeholderBase64Input": {
+    "message": "E hoʻokomo i ka kikokikona e hoʻopaʻa inoa a i ʻole Base64 e hoʻokaʻawale…",
+    "description": "Placeholder text inside the Base64 input textarea."
+  },
+  "placeholderUrlInput": {
+    "message": "E hoʻokomo i ka kikokikona no ka hoʻopaʻa ʻana a i ʻole kahi kaula i hoʻopaʻa ʻia i ka URL e wehe ai…",
+    "description": "Placeholder text inside the URL encoding input textarea."
+  },
+  "placeholderHtmlInput": {
+    "message": "E hoʻokomo i ka kikokikona e hoʻopaʻa inoa a i ʻole nā ​​mea HTML e hoʻokaʻawale…",
+    "description": "Placeholder text inside the HTML entities input textarea."
+  },
+  "placeholderOutput": {
+    "message": "E ʻike ʻia ka hopena ma aneʻi…",
+    "description": "Placeholder text inside all output textareas."
+  },
+  "btnEncode": {
+    "message": "Hoʻopili",
+    "description": "Label for the encode action button."
+  },
+  "btnDecode": {
+    "message": "Wehewehe",
+    "description": "Label for the decode action button."
+  },
+  "btnClear": {
+    "message": "Akaka",
+    "description": "Label for the clear button that empties both textareas."
+  },
+  "btnCopy": {
+    "message": "kope",
+    "description": "Label for the copy-to-clipboard button next to the output textarea."
+  },
+  "btnCopied": {
+    "message": "Kope ʻia!",
+    "description": "Temporary label shown on the copy button after a successful clipboard write."
+  },
+  "ariaTabList": {
+    "message": "ʻAno hoʻopāpā",
+    "description": "Accessible label for the tab navigation landmark (aria-label on the nav element)."
+  },
+  "ariaLangSelector": {
+    "message": "E koho i ka ʻōlelo pili",
+    "description": "Accessible label for the language selector dropdown."
+  },
+  "footerPrivacy": {
+    "message": "Hana ʻia nā hana āpau ma ka ʻāina - ʻaʻohe mea e waiho i kāu polokalamu kele pūnaewele.",
+    "description": "Privacy notice shown in the footer of the popup."
+  },
+  "charCountSingular": {
+    "message": "1 char",
+    "description": "Character count shown next to the output label when output is exactly 1 character."
+  },
+  "charCountPlural": {
+    "message": "$COUNT$ chars",
+    "description": "Character count shown next to the output label. $COUNT$ is replaced with the formatted number.",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "1,024"
+      }
+    }
+  },
+  "errorEmptyInput": {
+    "message": "Haʻalele ka hoʻokomo - ʻaʻohe mea e hana.",
+    "description": "Status message shown when the user clicks encode or decode with an empty input."
+  },
+  "errorInvalidBase64Chars": {
+    "message": "Pono ʻole Base64: loaʻa nā huapalapala ma waho o ka pīʻāpā Base64.",
+    "description": "Error shown when the input to Base64 decode contains illegal characters."
+  },
+  "errorInvalidBase64Padding": {
+    "message": "ʻAʻole kūpono ʻo Base64: ʻaʻohe padding (pono ka lōʻihi o ka nui o 4).",
+    "description": "Error shown when the Base64 string has wrong padding length."
+  },
+  "errorInvalidBase64Utf8": {
+    "message": "ʻAʻole kūpono ʻo UTF-8 nā bytes decoded. Hiki i ka Base64 ke hoʻopili i ka ʻikepili binary.",
+    "description": "Error shown when Base64 decodes successfully but the bytes are not valid UTF-8 text."
+  },
+  "errorBase64EncodeFailed": {
+    "message": "Hāʻule ka hoʻopāpā Base64: $DETAIL$",
+    "description": "Generic Base64 encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "invalid surrogate character"
+      }
+    }
+  },
+  "errorUrlEncodeSurrogate": {
+    "message": "ʻAʻole hiki ke hoʻopaʻa ʻia: aia i loko o ka mea hoʻokomo nā huaʻōlelo pani Unicode hewa ʻole.",
+    "description": "Error shown when encodeURIComponent receives a malformed JavaScript string."
+  },
+  "errorUrlDecodeMalformed": {
+    "message": "Hewa ka hoʻopāpā ʻana i ka URL: aia i loko o ka hoʻokomo ke kaʻina hoʻopaʻa ʻia hapa hapa.",
+    "description": "Error shown when decodeURIComponent receives a broken percent sequence like %GG or a trailing %."
+  },
+  "errorHtmlEncodeFailed": {
+    "message": "Ua hāʻule ka hoʻopāpā HTML: $DETAIL$",
+    "description": "Generic HTML encode failure. $DETAIL$ is the browser error message.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "errorHtmlDecodeFailed": {
+    "message": "ʻAʻole i hāʻule ka wehe ʻana o HTML: $DETAIL$",
+    "description": "Generic HTML decode failure.",
+    "placeholders": {
+      "detail": {
+        "content": "$1",
+        "example": "unexpected token"
+      }
+    }
+  },
+  "warningUnknownEntities": {
+    "message": "ʻAʻole ʻike ʻia kekahi mau hui a waiho ʻole ʻia: $ENTITIES$",
+    "description": "Warning shown when HTML decode encounters unknown named entities. $ENTITIES$ lists them.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;"
+      }
+    }
+  },
+  "warningUnknownEntitiesMore": {
+    "message": "ʻAʻole ʻike ʻia kekahi mau hui a waiho ʻole ʻia: $ENTITIES$ a me $COUNT$ hou aku.",
+    "description": "Warning shown when there are more than 3 unknown HTML entities.",
+    "placeholders": {
+      "entities": {
+        "content": "$1",
+        "example": "&foo;, &bar;, &baz;"
+      },
+      "count": {
+        "content": "$2",
+        "example": "5"
+      }
+    }
+  },
+  "tooltipKbShortcut": {
+    "message": "Manaʻo kōkua: Ctrl+Enter e hoʻopaʻa inoa",
+    "description": "Tooltip or hint text shown below the input area explaining the keyboard shortcut."
+  }
+}
